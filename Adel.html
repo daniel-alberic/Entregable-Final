@@ -25,11 +25,75 @@
     crossorigin="anonymous"
     ></script>
     <!--Conexion de CSS-->
-    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/Adel.css" />
     <!--jS para dispositivos moviles-->
     <script src="js/WE_MC_03_jquery.js"></script>
 </head>
 <body>
-    <h1>st</h1>
-</body>
+    <header>
+      <nav class="menu">
+        <!--logo menu-->
+        <div class="menu__logo">
+          <a href="index.html" class="menu__marca">
+            <img src="img/nova_isotipo_blanco.svg" alt="Logo Nova" />
+            <span class="logo__nombre">N&Oslash;VA</span>
+          </a>
+        </div>
+        <!-- 2. Botón Hamburguesa (para responsive en móvil) -->
+        <a href="#" class="menu__btn-menu" id="btn-menu">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+        <!-- 3. Bloque de Enlaces de Navegación -->
+        <div class="menu__enlaces" id="enlaces">
+          <a href="index.html">Inicio</a>
+          <a href="sebastian.html">Hombre</a>
+          <a href="Marcelo.html">Mujer</a>
+          <a href="Adel.html">Niños</a>
+          <a href="fran.html">Contacto</a>
+          <a href="#">Login</a>
+        </div>
+        <!-- 4. Buscar y carrito -->
+        <div class="menu__acciones">
+          <button
+            type="button"
+            class="menu__buscar"
+            id="btn-buscar"
+            aria-label="Buscar">
+            <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
+              <circle
+                cx="13"
+                cy="13"
+                r="9"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"/>
+              <path
+                d="M20 20 L29 29"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"/>
+            </svg>
+          </button>
+          <input
+            type="search"
+            class="menu__input-buscar"
+            id="input-buscar"
+            placeholder="Buscar productos"
+            aria-label="Buscar productos"/>
+          <a href="#" class="menu__carrito"
+            >Carrito (<span id="carrito-cantidad">0</span>)</a>
+        </div>
+      </nav>
+    </header>
+    <!-- JS -->
+    <script src="js/WE_MC_02_headroom.min.js"></script>
+    <script src="js/WE_MC_04_menu-flex.js"></script>
+    <script>
+      $(function () {
+        $("#btn-buscar").on("click", function () {
+          $("#input-buscar").toggleClass("activo").focus();
+        });
+      });
+    </script>
+  </body>
 </html>
