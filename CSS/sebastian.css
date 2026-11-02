@@ -1,1 +1,241 @@
-/* fawf */
+:root{
+   --colorPrimario: #EC111A; 
+   --colorSecundario: #082ba5;
+   --colorTerceario: #007BDF;
+   --colorTitulos: #282D31;
+   --colorParrafos: #53575A;
+   --colorSombras: #282D31;
+   --colorBordes: #DFE0E0;
+}
+
+
+/* SELECTOR UNIVERSAL */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 4px var(--colorSombras);
+}
+.menu{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu__img-logo{
+    height: 60px;
+}
+.menu__btn-menu{
+    display: none;
+}
+.menu__enlaces a{
+    font-family: 'Poppins';
+    padding: .7em;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    color: var(--colorTitulos);
+    font-weight: 500;
+}
+.menu__enlaces a:hover{
+    color: var(--colorPrimario);
+}
+@media screen and (max-width: 1023px){
+    .menu{
+        flex-direction: column;
+    }
+    .menu__logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em;
+    }
+    .menu__btn-menu{
+        display: block;
+        color: var(--colorPrimario);
+        font-size: 1.5em;
+    }
+    .menu__enlaces{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* Inicio de banner */
+.mainbanner{
+    position: relative;
+    padding: 29em 14em;
+    /* background-color: var(--colorSecundario); */
+    background: linear-gradient(to right ,white,black);
+    top: 30px;
+}
+.mainbanner::after{
+    content:"";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:var(--colorSecundario);
+    mix-blend-mode: color;
+    opacity: .2;
+
+}
+.mainbanner__img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    opacity: .3;
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: auto;
+    z-index: 20;
+    position: relative;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.centrado{
+    display: block;
+    margin: auto;
+}
+.mainbanner__data{
+    text-align: center;
+}
+.mainbanner__titulo{
+    color: black;
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-size: 4em;
+}
+.mainbanner__parrafo{
+    color: black;
+    font-family: 'Poppins';
+    font-size: 2em;
+}
+/* Fin de banner */
+
+/* Carousel */
+/* SECCION CYBER WOW: OCUPAR CASI TODA LA PANTALLA */
+section.container.my-5 {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 4.6% !important;
+    padding-right: 4.6% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* CONTENEDOR DEL CARRUSEL */
+#miCarrusel {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#miCarrusel .carousel-inner {
+    width: 100% !important;
+    overflow: visible !important;
+}
+
+/* PRODUCTOS EN HORIZONTAL */
+#miCarrusel main.container {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 0 20px !important;
+
+    gap: 12px;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    box-sizing: border-box;
+}
+
+/* ELIMINAR LOS SALTOS DE LINEA */
+#miCarrusel main.container br {
+    display: none !important;
+}
+
+/* ANCHO DE CADA PRODUCTO */
+#miCarrusel .producto {
+    flex: 0 0 23.5% !important;
+    min-width: 23.5% !important;
+    width: 23.5% !important;
+    display: flex;
+    flex-direction: column;
+}
+
+/* IMAGENES */
+#miCarrusel .producto img {
+    display: block;
+    width: 100% !important;
+    height: 400px !important;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f1f1f1;
+}
+
+/* INFORMACION DEL PRODUCTO */
+#miCarrusel .producto h3 {
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+#miCarrusel .producto p {
+    font-size: 15px;
+    color: #777;
+}
+
+#miCarrusel .producto strong {
+    font-size: 16px;
+}
+
+#miCarrusel .producto span {
+    font-size: 15px;
+    color: green;
+    margin-top: 10px;
+}
+
+/* BARRA DE DESPLAZAMIENTO */
+#miCarrusel main.container::-webkit-scrollbar {
+    height: 6px;
+}
+
+#miCarrusel main.container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+/* fin del carousel */
+/* cards */
+.cards__titulo{
+    text-align: center;
+    margin-top: 2em;
+    font-weight: 700;
+    font-family: 'Poppins';
+}
