@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <title>Inicio</title>
+    <title>Nova / Niños</title>
     <!-- FAVICON Y/O LOGOTIPO DE PAGINA -->
     <link rel="shortcut icon" href="img/nova_isotipo_negro.svg" type="image/x-icon" />
+    <!-- FRAMEWORK DE BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
     <!--LIBRERIA DE FUENTES-->
     <link
       href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&display=swap"
@@ -25,62 +32,113 @@
     <script src="js/WE_MC_03_jquery.js"></script>
 </head>
 <body>
-    <header>
-      <nav class="menu">
-        <!--logo menu-->
-        <div class="menu__logo">
-          <a href="index.html" class="menu__marca">
-            <img src="img/nova_isotipo_blanco.svg" alt="Logo Nova" />
-            <span class="logo__nombre">N&Oslash;VA</span>
-          </a>
-        </div>
-        <!-- 2. Botón Hamburguesa (para responsive en móvil) -->
-        <a href="#" class="menu__btn-menu" id="btn-menu">
-          <i class="fa-solid fa-bars"></i>
+  <header>
+    <nav class="menu">
+    <!--1. logo menu-->
+      <div class="menu__logo">
+        <a href="index.html" class="menu__marca">
+          <img src="img/nova_isotipo_blanco.svg" alt="Logo Nova" />
+          <span class="logo__nombre">N&Oslash;VA</span>
         </a>
-        <!-- 3. Bloque de Enlaces de Navegación -->
-        <div class="menu__enlaces" id="enlaces">
-          <a href="index.html">Inicio</a>
-          <a href="sebastian.html">Hombre</a>
-          <a href="Marcelo.html">Mujer</a>
-          <a href="Adel.html">Niños</a>
-          <a href="fran.html">Contacto</a>
-          <a href="#">Login</a>
-        </div>
-        <!-- 4. Buscar y carrito -->
-        <div class="menu__acciones">
-          <button
-            type="button"
-            class="menu__buscar"
-            id="btn-buscar"
-            aria-label="Buscar">
-            <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
-              <circle
-                cx="13"
-                cy="13"
-                r="9"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"/>
-              <path
-                d="M20 20 L29 29"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"/>
-            </svg>
-          </button>
-          <input
-            type="search"
-            class="menu__input-buscar"
-            id="input-buscar"
-            placeholder="Buscar productos"
-            aria-label="Buscar productos"/>
-          <a href="#" class="menu__carrito"
-            >Carrito (<span id="carrito-cantidad">0</span>)</a>
-        </div>
-      </nav>
-    </header>
-    <!-- JS -->
+      </div>
+    <!-- 2. Botón Hamburguesa (para responsive en móvil) -->
+      <a
+        href="#"
+        class="menu__btn-menu"
+        id="btn-menu"
+        aria-label="Abrir menú"
+        >
+        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M3 6h18M3 12h18M3 18h18"
+          stroke="currentColor"
+          stroke-width="2.5"
+          fill="none"
+          stroke-linecap="round"
+        />
+        </svg>
+      </a>
+    <!-- 3. Bloque de Enlaces de Navegación -->
+      <div class="menu__enlaces" id="enlaces">
+        <a href="index.html">Inicio</a>
+        <a href="sebastian.html">Hombre</a>
+        <a href="Marcelo.html">Mujer</a>
+        <a href="Adel.html">Niños</a>
+        <a href="fran.html">Contacto</a>
+        <a href="#">Login</a>
+      </div>
+    <!-- 4. Buscar y carrito -->
+      <div class="menu__acciones">
+        <button
+          type="button"
+          class="menu__buscar"
+          id="btn-buscar"
+          aria-label="Buscar">
+          <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
+          <circle
+            cx="13"
+            cy="13"
+            r="9"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"/>
+          <path
+            d="M20 20 L29 29"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"/>
+          </svg>
+        </button>
+        <input
+          type="search"
+          class="menu__input-buscar"
+          id="input-buscar"
+          placeholder="Buscar productos"
+          aria-label="Buscar productos"/>
+        <a href="#" class="menu__carrito"
+          >Carrito (<span id="carrito-cantidad">0</span>)</a>
+      </div>
+    </nav>
+  </header>
+  <!--Baner carrusel-->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/baner__Niño1.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/baner_qmmvv.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="img/baner_FM.png" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+      crossorigin="anonymous">
+    </script>
+  <!-- JS -->
     <script src="js/WE_MC_02_headroom.min.js"></script>
     <script src="js/WE_MC_04_menu-flex.js"></script>
     <script>
