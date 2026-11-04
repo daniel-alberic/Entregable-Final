@@ -1,84 +1,180 @@
-:root{
-   --colorPrimario: #EC111A; 
-   --colorSecundario: #082ba5;
-   --colorTerceario: #007BDF;
-   --colorTitulos: #282D31;
-   --colorParrafos: #53575A;
-   --colorSombras: #282D31;
-   --colorBordes: #DFE0E0;
+:root {
+    --colorPrimario: #b7ff00;
+    --colorSecundario: #050505;
+    --colorTerciario: #ffff;
+    --colorBotones: #e6d00d;
+    --colorParrafo: #dbdbdb;
+    --colorBordes: #242424;
 }
-
-
-/* SELECTOR UNIVERSAL */
-*{
-    padding: 0;
-    margin: 0;
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-header{
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 0 4px var(--colorSombras);
+/* MENU DE NAVEGACIÓN */
+
+/* Tipografias */
+:root {
+    --fuente-titulos: 'Bebas Neue', Impact, sans-serif;
+    --fuente-parrafos: 'Monda', Arial, sans-serif;
+    --fuente-marca: 'Poppins', Arial, sans-serif;
 }
-.menu{
-    width: 85%;
-    margin: auto;
+
+.menu__logo img {
+    height: 48px;
+    width: auto;
+}
+
+.menu__marca {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    text-decoration: none;
+}
+
+.logo__nombre {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #ffff;
+    letter-spacing: 10px;
+}
+
+.menu {
+    padding: 15px;
+    background: #000;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
-.menu__img-logo{
-    height: 60px;
-}
-.menu__btn-menu{
-    display: none;
-}
-.menu__enlaces a{
-    font-family: 'Poppins';
-    padding: .7em;
-    text-align: center;
-    font-size: 1em;
+
+.menu__enlaces a {
     text-decoration: none;
-    color: var(--colorTitulos);
-    font-weight: 500;
+    padding: 15px 50px;
+    font-family: "Monda", sans-serif;
+    color: white;
 }
-.menu__enlaces a:hover{
-    color: var(--colorPrimario);
+
+/* Contenedor de lupa buscador y carrito */
+.menu__acciones {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
-@media screen and (max-width: 1023px){
-    .menu{
+
+/* boton de la Lupa */
+.menu__buscar {
+    background: none;
+    border: 0;
+    color: #ffff;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+}
+
+.menu__input-buscar {
+    display: none;
+    padding: 8px 16px;
+    border: 2px solid #6b6b6b;
+    border-radius: 999px;
+    background: #1f1f1f;
+    color: #ffff;
+    font-family: var(--fuente-parrafos);
+}
+
+.menu__input-buscar.activo {
+    display: block;
+}
+
+.menu__carrito {
+    color: #ffff;
+    text-decoration: none;
+    font-family: var(--fuente-parrafos);
+    font-weight: 700;
+    border: 2px solid #b7ff00;
+    border-radius: 999px;
+    padding: 10px 28px;
+}
+
+.menu__carrito:hover {
+    background: #b7ff00;
+    color: #0a0a0a;
+}
+
+/* Hamburguesa: oculta en pantallas grandes */
+.menu__btn-menu {
+    display: none;
+    color: #fff;
+    padding: 6px;
+}
+
+.menu__enlaces {
+    display: flex;
+}
+
+/* Evita que los textos se partan en dos líneas */
+.menu__enlaces a {
+    white-space: nowrap;
+    padding: 15px clamp(12px, 2.5vw, 50px);
+}
+
+.menu__carrito {
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .menu {
+        position: relative;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu__logo { order: 1; }
+    .menu__acciones { order: 2; gap: 8px; }
+    .menu__btn-menu { order: 3; display: flex; }
+
+    /* Los enlaces pasan a una fila propia, en columna */
+    .menu__enlaces {
+        order: 4;
+        flex-basis: 100%;
         flex-direction: column;
+        display: none;
     }
-    .menu__logo{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        padding: 1em;
+
+    .menu__enlaces a {
+        padding: 14px 0;
+        font-size: 18px;
+        border-bottom: 1px solid var(--colorBordes);
     }
-    .menu__btn-menu{
-        display: block;
-        color: var(--colorPrimario);
-        font-size: 1.5em;
-    }
-    .menu__enlaces{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
+
+    /* Todo un poco más pequeño */
+    .menu__logo img { height: 40px; }
+    .logo__nombre { font-size: 22px; letter-spacing: 6px; }
+    .menu__carrito { padding: 8px 12px; font-size: 13px; }
+
+    /* El buscador se abre debajo de la barra */
+    .menu__input-buscar.activo {
+        position: absolute;
+        top: 100%;
+        left: 15px;
+        right: 15px;
+        margin-top: 8px;
+        z-index: 10;
     }
 }
+
+/* FIN MENU DE NAVEGACIÓN */
+
 /* Inicio de banner */
 .mainbanner{
     position: relative;
     padding: 29em 14em;
     /* background-color: var(--colorSecundario); */
     background: linear-gradient(to right ,white,black);
-    top: 30px;
+    top: auto;
 }
 .mainbanner::after{
     content:"";
@@ -124,13 +220,13 @@ header{
 }
 .mainbanner__titulo{
     color: black;
-    font-family: 'Poppins';
+    font-family: 'Bebas Neue', Impact, sans-serif;
     font-weight: 700;
     font-size: 4em;
 }
 .mainbanner__parrafo{
     color: black;
-    font-family: 'Poppins';
+    font-family: 'Monda', Arial, sans-serif;
     font-size: 2em;
 }
 /* Fin de banner */
@@ -235,7 +331,88 @@ section.container.my-5 {
 /* cards */
 .cards__titulo{
     text-align: center;
-    margin-top: 2em;
+    margin-top: 1em;
     font-weight: 700;
-    font-family: 'Poppins';
+    font-family: 'Bebas Neue', Impact, sans-serif;
+    font-size: 3em;
 }
+/* NOVEDADES */
+.Zapatillas{
+  display: flex;
+  flex-wrap: wrap;
+}
+.Zapatillas img{
+     width: 100%;
+     height: 600px;
+     object-fit: cover;
+}
+.hola{
+    text-align: center;
+    margin-top: auto;
+    font-size: 3em;
+    font-family: 'Bebas Neue', Impact, sans-serif;
+}
+.Zapatillas h4{
+    color: black;
+    font-family: 'Monda', Arial, sans-serif;
+    font-size: 1.5em;
+}
+.boton{
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    padding: .8em .8em;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 3em;
+    font-family: 'Monda', Arial, sans-serif;
+}
+.boton:hover{
+    background: #b7ff00;
+    color: #0a0a0a;
+}
+/* fin novedades */
+
+/* compra deporte */
+.correr{
+    position: relative;
+}
+.correr img{
+    width: 100%;
+     height: 900px;
+     object-fit: cover;
+}
+.botones{
+    position: absolute;
+    left: 1em;
+    bottom: 2em;
+    font-size: 2em;
+}
+.deporte{
+    text-align: center;
+    margin-top: auto;
+    font-size: 3em;
+    font-family: 'Bebas Neue', Impact, sans-serif;
+}
+.botones{
+    background-color: white;
+    color: black;
+    padding: .8em .8em;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 2em;
+    font-family: 'Monda', Arial, sans-serif;
+}
+.botones:hover{
+    background: #b7ff00;
+    color: #0a0a0a;
+}
+/* fin compra deporte */
