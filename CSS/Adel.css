@@ -175,3 +175,32 @@
     font-family: var(--fuente-titulos);
     font-size: 6em;
 }
+/* FIN DE CONTACTOS */
+footer {
+    background-color: var(--colorPrimario);
+    color: #fff;
+    padding: 1em 0;
+}
+
+.iconos-pie {
+    font-size: 3em;
+}
+
+.iconos-pie:hover {
+    color: var(--colorSecundario)
+}
+
+.pie,
+.info {
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 1em;
+    color: #000;
+}
+
+.derechos {
+    background-color: var(--colorSecundario);
+    color: #fff;
+    font-family: "poppins";
+    padding: 0.5em 0;
+}
