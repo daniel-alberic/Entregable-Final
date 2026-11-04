@@ -166,4 +166,12 @@
         z-index: 10;
     }
 }
-/* FIN MENU DE NAVEGACIÓN */
+/*precentacion*/
+.Precentacion__zona{
+    padding: 5em;
+}
+.precentacion__texto{
+    text-align: center;
+    font-family: var(--fuente-titulos);
+    font-size: 6em;
+}

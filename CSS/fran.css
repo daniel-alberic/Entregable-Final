@@ -105,6 +105,27 @@
     color: #0a0a0a;
 }
 
+/* Hamburguesa: oculta en pantallas grandes */
+.menu__btn-menu {
+    display: none;
+    color: #fff;
+    padding: 6px;
+}
+
+.menu__enlaces {
+    display: flex;
+}
+
+/* Evita que los textos se partan en dos líneas */
+.menu__enlaces a {
+    white-space: nowrap;
+    padding: 15px clamp(12px, 2.5vw, 50px);
+}
+
+.menu__carrito {
+    white-space: nowrap;
+}
+
 @media (max-width: 900px) {
     .menu {
         position: relative;
@@ -168,6 +189,8 @@
 
 /* FIN MENU DE NAVEGACIÓN */
 
+
+/* INICIO DE CONTACTO */
 /* =========================================
    Contenedor Principal de la Tarjeta
 ========================================= */
@@ -175,11 +198,12 @@
     display: flex;
     width: 100%;
     max-width: 900px;
-    background-color: #fafafa;
+    margin: 0 auto;
+    margin-top: 60px;
+    background-color: #b7ff00;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    /* Mantiene los bordes redondeados limpios */
     position: relative;
 }
 
@@ -191,30 +215,33 @@
     padding: 50px 40px;
     position: relative;
     overflow: hidden;
-    background-color: #fbfbfb;
+    background-color: black;
 }
 
 .info-title {
-    color: var(--colorprimario);
+    color: var(--colorParrafo);
     font-size: 22px;
     margin-bottom: 40px;
+    font-family: 'Monda';
 }
 
 .info-list {
     list-style: none;
     margin-bottom: 50px;
+    color: #fff;
+    font-family: 'Monda';
 }
 
 .info-list li {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
-    color: var(--colorparrafos);
+    color: var(--colorParrafos);
     font-size: 15px;
 }
 
 .info-list i {
-    color: var(--colorprimario);
+    color: var(--colorParrafo);
     font-size: 24px;
     margin-right: 20px;
     width: 25px;
@@ -222,9 +249,11 @@
 }
 
 .social-section p {
-    color: var(--colorparrafos);
+    color: var(--colorParrafos);
     margin-bottom: 15px;
     font-size: 14px;
+    color: #fff;
+    font-family: 'Monda';
 }
 
 .social-icons {
@@ -238,8 +267,8 @@
     align-items: center;
     width: 35px;
     height: 35px;
-    background-color: var(--colorprimario);
-    color: #fff;
+    background-color: greenyellow;
+    color: white;
     text-decoration: none;
     border-radius: 8px;
     transition: all 0.3s ease;
@@ -271,11 +300,12 @@
 ========================================= */
 .contact-form {
     width: 55%;
-    padding: 50px 40px;
-    background-color: var(--colorprimario);
+    padding: 50px 60px;
+    background-color: var(--colorPrimario);
     position: relative;
     overflow: hidden;
-    color: #fff;
+    color: black;
+    font-family: 'Monda';
 }
 
 /* Decoraciones de fondo circulares */
@@ -317,7 +347,7 @@ form {
 
 /* Estilo de los campos usando Fieldset para romper la línea del borde */
 .input-group {
-    border: 1px solid #fff;
+    border: 1px solid black;
     border-radius: 25px;
     padding: 0 20px 5px 20px;
     margin-bottom: 20px;
@@ -327,7 +357,7 @@ form {
     font-size: 14px;
     padding: 0 10px;
     margin-left: 10px;
-    color: #fff;
+    color: black;
 }
 
 .input-group input,
@@ -336,7 +366,7 @@ form {
     border: none;
     background: transparent;
     outline: none;
-    color: #fff;
+    color: black;
     font-size: 15px;
     font-family: inherit;
 }
@@ -354,8 +384,8 @@ form {
 
 /* Botón Enviar */
 .btn-send {
-    background-color: #fff;
-    color: var(--colorprimario);
+    background-color: black;
+    color: var(--colorParrafo);
     border: none;
     border-radius: 25px;
     padding: 10px 35px;
@@ -366,10 +396,11 @@ form {
     /* Alinea a la izquierda */
     margin-top: 5px;
     transition: all 0.3s ease;
+    font-family: 'Monda';
 }
 
 .btn-send:hover {
-    background-color: #f1f1f1;
+    background-color: black;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
@@ -391,4 +422,34 @@ form {
         display: none;
         /* Ocultar decoración en móvil para ahorrar espacio */
     }
+}
+
+/* FIN DE CONTACTOS */
+footer {
+    background-color: var(--colorPrimario);
+    color: #fff;
+    padding: 1em 0;
+}
+
+.iconos-pie {
+    font-size: 3em;
+}
+
+.iconos-pie:hover {
+    color: var(--colorSecundario)
+}
+
+.pie,
+.info {
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 1em;
+    color: #000;
+}
+
+.derechos {
+    background-color: var(--colorSecundario);
+    color: #fff;
+    font-family: "poppins";
+    padding: 0.5em 0;
 }
