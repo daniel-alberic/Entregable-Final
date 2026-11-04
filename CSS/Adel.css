@@ -57,6 +57,10 @@
     font-family: "Monda", sans-serif;
     color: #ffff;
 }
+.menu__enlaces a:hover {
+    color: #b7ff00;
+    transition: 0.4s;
+}
 
 /* Contenedor de lupa buscador y carrito */
 .menu__acciones {
@@ -103,6 +107,7 @@
 .menu__carrito:hover {
     background: #b7ff00;
     color: #0a0a0a;
+    transition: 0.3s;
 }
 
 /* Hamburguesa: oculta en pantallas grandes */
