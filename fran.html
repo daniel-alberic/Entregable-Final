@@ -21,7 +21,7 @@
 
     <link rel="icon" type="image/svg+xml" href="img/nova_isotipo_negro.svg" />
 
-    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/fran.css" />
 
     <!-- JS -->
     <script src="js/WE_MC_03_jquery.js"></script>
@@ -105,5 +105,59 @@
         });
       });
     </script>
+       <div class="contact-container">
+        <!-- Columna Izquierda: Información -->
+        <div class="contact-info">
+            <h2 class="info-title">Información de contacto</h2>
+            <ul class="info-list">
+                <li><i class="fas fa-map-marker-alt"></i> Dirección de la empresa, 123</li>
+                <li><i class="fas fa-envelope"></i> correo@ejemplo.com</li>
+                <li><i class="fas fa-phone"></i> +123 456 789</li>
+            </ul>
+
+            <div class="social-section">
+                <p>Síguenos en redes sociales:</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="circle-decoration"></div>
+        </div>
+
+        <!-- Columna Derecha: Formulario -->
+        <div class="contact-form">
+            <h2 class="form-title">Envíanos un mensaje</h2>
+            <form action="#" method="POST">
+                
+                <fieldset class="input-group">
+                    <legend>Nombre completo</legend>
+                    <input type="text" name="nombre" required>
+                </fieldset>
+
+                <fieldset class="input-group">
+                    <legend>Correo electrónico</legend>
+                    <input type="email" name="email" required>
+                </fieldset>
+
+                <fieldset class="input-group">
+                    <legend>Teléfono</legend>
+                    <input type="tel" name="telefono">
+                </fieldset>
+
+                <fieldset class="input-group textarea-group">
+                    <legend>Mensaje</legend>
+                    <textarea name="mensaje" required></textarea>
+                </fieldset>
+
+                <button type="submit" class="btn-send">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
   </body>
 </html>
