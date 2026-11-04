@@ -106,6 +106,44 @@
       </nav>
     </header>
 
+    <main>
+      <section class="look">
+        <div class="look__encabezado">
+          <h2 class="look__titulo">COMPRA EL LOOK</h2>
+          <a href="#" class="look__ver-todo">Ver todo</a>
+        </div>
+
+
+        <div class="look__lista">
+          <div class="look__item">
+            <img src="img/modelo-1.jpg" alt="Look deportivo en tonos oscuros">
+            <span class="look__etiqueta">4 artículos</span>
+          </div>
+
+          <div class="look__item">
+            <img src="img/modelo-2.jpg" alt="Look deportivo en tonos oscuros">
+            <span class="look__etiqueta">4 artículos</span>
+          </div>
+
+          <div class="look__item">
+            <img src="img/modelo-3.jpg" alt="Look deportivo en tonos oscuros">
+            <span class="look__etiqueta">4 artículos</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner">
+        <img src="img/grupo-deportistas.avif" class="banner__imagen" alt="">
+
+
+        <div class="banner__contenido">
+          <h2 class="banner__titulo">MOMENTOS PARA EJERCITARSE</h2>
+          <p class="banner__texto">Encuentra tus looks favoritos para este verano.</p>
+          <a href="#" class="banner__boton">COMPRAR AHORA</a>
+        </div>
+      </section>
+    </main>
+
     <!-- JS -->
 
     <script src="js/WE_MC_02_headroom.min.js"></script>
@@ -116,7 +154,12 @@
         $("#btn-buscar").on("click", function () {
           $("#input-buscar").toggleClass("activo").focus();
         });
-      });
+
+            $("#btn-menu").on("click", function (e) {
+      e.preventDefault();
+      $("#enlaces").toggleClass("abierto");
+    });
+  });
     </script>
   </body>
 </html>

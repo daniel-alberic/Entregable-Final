@@ -151,6 +151,14 @@
         border-bottom: 1px solid var(--colorBordes);
     }
 
+    .menu__enlaces.abierto {
+    display: flex;
+}
+
+    .menu__btn-menu:focus:not(:focus-visible) {
+    outline: none;
+}
+
     /* Todo un poco más pequeño */
     .menu__logo img { height: 40px; }
     .logo__nombre { font-size: 22px; letter-spacing: 6px; }
@@ -166,5 +174,129 @@
         z-index: 10;
     }
 }
-
 /* FIN MENU DE NAVEGACIÓN */
+
+
+/* SECCIÓN COMPRA EL LOOK */
+.look {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.look__encabezado {
+    margin-bottom: 20px;
+}
+
+.look__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp (32px, 5vw, 48px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--colorSecundario);
+}
+
+.look__ver-todo {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border: 1px solid var(--colorSecundario);
+    text-decoration: none;
+    color: var(--colorSecundario);
+    font-family: var(--fuente-parrafos);
+}
+
+.look__lista {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.look__item {
+    position: relative;
+    min-width: 0;
+}
+
+.look__item img {
+    background-size: cover;
+    display: block;
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.look__etiqueta {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    padding: 8px 12px;
+    background: #cacaca;
+    color: var(--colorSecundario);
+    font-family: var(--fuente-parrafos);
+    font-size: 14px;
+}
+
+/* En celular: las fotos se deslizan hacia el lado */
+@media (max-width: 900px) {
+    .look__lista {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+
+    .look__item {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+    }
+}
+
+/* BANNER */
+.banner {
+    position: relative;
+}
+
+.banner__imagen {
+    display: block;
+    width: 100%;
+    height: clamp (320px, 45vw, 520px);
+    object-fit: cover;
+}
+
+.banner__contenido {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.banner__titulo {
+    font-family: var(--fuente-titulos);
+    font-size: clamp(32px, 6vw, 64px);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.banner__texto {
+    font-family: var(--fuente-parrafos);
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+.banner__boton {
+    padding: 14px 28px;
+    background: #fff;
+    color: var(--colorSecundario);
+    text-decoration: none;
+    font-family: var(--fuente-parrafos);
+    font-weight: 700;
+}
+
+.banner__boton:hover {
+    background: var(--colorPrimario);
+}
