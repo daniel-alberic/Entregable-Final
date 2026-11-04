@@ -105,4 +105,66 @@
     color: #0a0a0a;
 }
 
+/* Hamburguesa: oculta en pantallas grandes */
+.menu__btn-menu {
+    display: none;
+    color: #fff;
+    padding: 6px;
+}
+
+.menu__enlaces {
+    display: flex;
+}
+
+/* Evita que los textos se partan en dos líneas */
+.menu__enlaces a {
+    white-space: nowrap;
+    padding: 15px clamp(12px, 2.5vw, 50px);
+}
+
+.menu__carrito {
+    white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+    .menu {
+        position: relative;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu__logo { order: 1; }
+    .menu__acciones { order: 2; gap: 8px; }
+    .menu__btn-menu { order: 3; display: flex; }
+
+    /* Los enlaces pasan a una fila propia, en columna */
+    .menu__enlaces {
+        order: 4;
+        flex-basis: 100%;
+        flex-direction: column;
+        display: none;
+    }
+
+    .menu__enlaces a {
+        padding: 14px 0;
+        font-size: 18px;
+        border-bottom: 1px solid var(--colorBordes);
+    }
+
+    /* Todo un poco más pequeño */
+    .menu__logo img { height: 40px; }
+    .logo__nombre { font-size: 22px; letter-spacing: 6px; }
+    .menu__carrito { padding: 8px 12px; font-size: 13px; }
+
+    /* El buscador se abre debajo de la barra */
+    .menu__input-buscar.activo {
+        position: absolute;
+        top: 100%;
+        left: 15px;
+        right: 15px;
+        margin-top: 8px;
+        z-index: 10;
+    }
+}
+
 /* FIN MENU DE NAVEGACIÓN */
