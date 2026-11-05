@@ -1,11 +1,1472 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Sección Mujeres - Tienda Deportiva</title>
+
+     <!-- Enlace únicamente al archivo CSS (Sin JavaScript) -->
+
+    <link rel="stylesheet" href="CSS/Marcelo.css">
+
+    <!-- Fuentes de Google Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:ital,wght@0,700;0,800;1,800&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
+
+   
+
+    <!-- =================================================================
+
+         ESPACIO RESERVADO PARA TU MENÚ DE NAVEGACIÓN
+
+         Agrega aquí tu <header> o <nav>
+
+         ================================================================= -->
+
+    <header id="tu-menu-aqui">
+        <header style="display: block !important; visibility: visible !important; opacity: 1 !important; position: relative !important; width: 100% !important; background-color: #0b0b0b !important; z-index: 999999 !important; min-height: 70px !important;">
+  <nav class="menu" style="display: flex !important; align-items: center !important; justify-content: space-between !important; max-width: 1300px !important; margin: 0 auto !important; padding: 15px 20px !important; box-sizing: border-box !important;">
     
+    <!-- 1. Bloque del Logo -->
+    <div class="menu__logo">
+      <a href="index.html" class="menu__marca" style="display: flex !important; align-items: center !important; text-decoration: none !important; gap: 10px !important;">
+        <img src="img/nova_isotipo_blanco.svg" alt="Logo Nova" style="height: 35px !important; width: auto !important; display: inline-block !important;" onerror="this.style.display='none'">
+        <span class="logo__nombre" style="color: #ffffff !important; font-size: 1.5rem !important; font-weight: 800 !important; font-family: sans-serif !important;">NOVA</span>
+      </a>
+    </div>
+
+    <!-- 2. Botón Hamburguesa -->
+    <a href="#" class="menu__btn-menu" id="btn-menu" style="color: #ffffff !important; font-size: 1.5rem !important; display: none !important;">
+      <i class="fa-solid fa-bars"></i>
+    </a>
+
+    <!-- 3. Bloque de Enlaces de Navegación -->
+    <div class="menu__enlaces" id="enlaces" style="display: flex !important; gap: 20px !important;">
+      <a href="index.html" style="color: #ffffff !important; text-decoration: none !important; font-weight: 600 !important; font-size: 15px !important; font-family: sans-serif !important;">Inicio</a>
+      <a href="sebastian.html" style="color: #ffffff !important; text-decoration: none !important; font-weight: 600 !important; font-size: 15px !important; font-family: sans-serif !important;">Hombre</a>
+      <a href="Marcelo.html" style="color: #ffffff !important; text-decoration: none !important; font-weight: 600 !important; font-size: 15px !important; font-family: sans-serif !important;">Mujer</a>
+      <a href="Adel.html" style="color: #ffffff !important; text-decoration: none !important; font-weight: 600 !important; font-size: 15px !important; font-family: sans-serif !important;">Niños</a>
+      <a href="fran.html" style="color: #ffffff !important; text-decoration: none !important; font-weight: 600 !important; font-size: 15px !important; font-family: sans-serif !important;">Contacto</a>
+      <a href="#" style="color: #ffffff !important; text-decoration: none !important; font-weight: 600 !important; font-size: 15px !important; font-family: sans-serif !important;">Login</a>
+    </div>
+
+    <!-- 4. Buscar y carrito -->
+    <div class="menu__acciones" style="display: flex !important; align-items: center !important; gap: 15px !important;">
+      <input
+        type="search"
+        class="menu__input-buscar"
+        id="input-buscar"
+        placeholder="Buscar productos..."
+        style="padding: 6px 12px !important; border-radius: 20px !important; border: 1px solid #444 !important; background: #222 !important; color: #fff !important; font-size: 13px !important; outline: none !important;"
+      />
+      <a href="#" class="menu__carrito" style="color: #ffffff !important; background-color: #e60023 !important; padding: 7px 15px !important; border-radius: 20px !important; text-decoration: none !important; font-weight: 700 !important; font-size: 13px !important; font-family: sans-serif !important; white-space: nowrap !important;">
+        Carrito (<span id="carrito-cantidad">0</span>)
+      </a>
+    </div>
+  </nav>
+</header>
+
+       
+
+   
+
+    <!-- ================================================================= -->
+
+
+
+
+
+    <!-- BANNER PRINCIPAL (HERO) DE LA SECCIÓN MUJERES -->
+
+    <section class="hero-mujeres">
+
+        <!-- Imagen del banner puesta directamente en el HTML para que la cambies fácil -->
+
+        <img class="hero-bg-img" src="img/11da7f3d4e56d40367df5c9434e0655a.jpg" alt="Banner Colección Mujeres">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-badge">COLECCIÓN MUJER 2026</span>
+
+            <h1>SUPERA TUS LÍMITES CON ESTILO</h1>
+
+            <p>Descubre lo último en zapatillas de alto rendimiento y ropa deportiva diseñada para acompañarte en cada entrenamiento.</p>
+
+            <div class="hero-buttons">
+
+                <!-- Enlaces con anclas HTML puras (#) sin usar JavaScript -->
+
+                <a href="#zapatillas" class="btn-primary">Ver Zapatillas (16)</a>
+
+                <a href="#ropa" class="btn-secondary">Ver Ropa Deportiva (15)</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- CONTENEDOR PRINCIPAL DEL CATÁLOGO (30 PRODUCTOS EN TOTAL) -->
+
+    <main class="contenedor-principal">
+
+       
+
+        <!-- =================================================================
+
+             PARTE 1: SECCIÓN DE ZAPATILLAS DE MUJER (Productos 1 al 15)
+
+             Pon tus fotos en el atributo src="" de cada etiqueta <img>
+
+             ================================================================= -->
+
+        <section id="zapatillas" class="bloque-categoria">
+
+            <div class="catalogo-header">
+
+                <div class="catalogo-titulo">
+
+                    <h2>Zapatillas Deportivas para Mujer</h2>
+
+                    <p>Calzado de running, training, crossfit y estilo urbano (15 modelos)</p>
+
+                </div>
+
+                <div class="saltos-rapidos">
+
+                    <a href="#zapatillas" class="btn-salto activo">👟 Zapatillas (16)</a>
+
+                    <a href="#ropa" class="btn-salto">👚 Ir a Ropa (15)</a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="grid-productos">
+
+
+
+                <!-- Producto 1 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-nuevo">Nuevo</span>
+
+                        <span class="numero-item">#01</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/198959994157_1_20260624-mrtPeru.webp" alt="Nike Dunk Low SE">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas · Urbanas</span>
+
+                        <h3 class="nombre-producto">Nike Dunk Low SE</h3>
+
+                        <p class="descripcion-corta">Amortiguación reactiva para largas distancias.</p>
+
+                        <div class="tallas-disponibles">Tallas: 35 · 36 · 37 · 38 · 39</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 549.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 2 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#02</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/w=1200,h=1200,fit=pad.webp" alt="Zapatillas Urbanas Mujer Sybilla">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas · Deportivas</span>
+
+                        <h3 class="nombre-producto">Zapatillas Urbanas Mujer Sybilla</h3>
+
+                        <p class="descripcion-corta">Diseño ultraligero para gimnasio y uso diario.</p>
+
+                        <div class="tallas-disponibles">Tallas: 36 · 37 · 38 · 39</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 139.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 3 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-oferta">-20%</span>
+
+                        <span class="numero-item">#03</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Zapatillas_Campus_00s_Plomo_HQ8707_01_standard.avif" alt="ZAPATILLAS CAMPUS 00s">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas · Urbanas</span>
+
+                        <h3 class="nombre-producto">ZAPATILLAS CAMPUS 00s</h3>
+
+                        <p class="descripcion-corta">Suela plana de alta estabilidad para levantamiento.</p>
+
+                        <div class="tallas-disponibles">Tallas: 35 · 36 · 37 · 38</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio"><del>S/ 429.00</del> S/ 214.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 4 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#04</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/image1-2026287363636.webp" alt="ZAPATILLAS MUJER SKECHERS URBANAS NEGRO DLITES">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas · Skechers</span>
+
+                        <h3 class="nombre-producto">ZAPATILLAS MUJER SKECHERS URBANAS NEGRO DLITES</h3>
+
+                        <p class="descripcion-corta">Tejido transpirable que se adapta a tu pie.</p>
+
+                        <div class="tallas-disponibles">Tallas: 36 · 37 · 38 · 40</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 259.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 5 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-nuevo">Top Ventas</span>
+
+                        <span class="numero-item">#05</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/198729858993_3_20260511-mrtPeru.webp" alt="Air Jordan 1 Mid SE">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas · Running</span>
+
+                        <h3 class="nombre-producto">Air Jordan 1 Mid SE</h3>
+
+                        <p class="descripcion-corta">Máximo retorno de energía en cada zancada.</p>
+
+                        <div class="tallas-disponibles">Tallas: 35 · 36 · 37 · 38 · 39</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 659.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 6 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#06</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Zapatillas_de_Tenis_Barricade_14_Arcilla_Blanco_JR4445_01_00_standard.avif" alt="Zapatillas de Tenis Barricade 14 Arcilla">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas · Tenis / Padel</span>
+
+                        <h3 class="nombre-producto">Zapatillas de Tenis Barricade 14 Arcilla</h3>
+
+                        <p class="descripcion-corta">Agarre lateral reforzado para cambios de ritmo.</p>
+
+                        <div class="tallas-disponibles">Tallas: 36 · 37 · 38 · 39</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 579.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 7 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#07</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/198958523471_3_20260605-mrtPeru.webp" alt="Nike Reax 8 SL">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas · urbana</span>
+
+                        <h3 class="nombre-producto">Nike Reax 8 SL</h3>
+
+                        <p class="descripcion-corta">Tracción multidireccional para terrenos difíciles.</p>
+
+                        <div class="tallas-disponibles">Tallas: 36 · 37 · 38 · 39</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 399.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 8 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-oferta">-15%</span>
+
+                        <span class="numero-item">#08</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Zapatillas_adidas_X_FARM_Streettalk_Beige_KI2750_HM1.avif" alt="Zapatillas adidas X FARM Streettalk">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas · Urbana</span>
+
+                        <h3 class="nombre-producto">Zapatillas adidas X FARM Streettalk</h3>
+
+                        <p class="descripcion-corta">Espuma de nitrógeno inyectado para mayor ligereza.</p>
+
+                        <div class="tallas-disponibles">Tallas: 35 · 36 · 37 · 38</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio"><del>S/ 209.00</del> S/ 150.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 9 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#09</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/zapatilla-mujer-ctasbowsandlace-web-a20574c-0_1_r4qrmnn6kozuzboa.webp" alt="Zapatillas Mujer Chuck Taylor All Star Bows And Lace Lila">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas · Urbana</span>
+
+                        <h3 class="nombre-producto">Zapatillas Mujer Chuck Taylor All Star Bows And Lace Lila</h3>
+
+                        <p class="descripcion-corta">Placa de fibra de carbono para máxima velocidad.</p>
+
+                        <div class="tallas-disponibles">Tallas: 36 · 37 · 38 · 39</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 319.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 10 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#10</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/198729562609_3_20260416-mrtPeru.webp" alt="Nike Court Legacy Lift">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas · Urbano / Gym</span>
+
+                        <h3 class="nombre-producto">Nike Court Legacy Lift</h3>
+
+                        <p class="descripcion-corta">Suavidad superior para caminatas y rutinas de bajo impacto.</p>
+
+                        <div class="tallas-disponibles">Tallas: 35 · 36 · 37 · 38 · 39</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 399.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 11 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-nuevo">Nuevo</span>
+
+                        <span class="numero-item">#11</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/198487994209_3_20260209-mrtPeru.webp" alt="Nike Vomero 18">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas de correr en pavimento para mujer</span>
+
+                        <h3 class="nombre-producto">Nike Vomero 18</h3>
+
+                        <p class="descripcion-corta">Ranuras flexibles en la suela para movimientos naturales.</p>
+
+                        <div class="tallas-disponibles">Tallas: 35 · 36 · 37 · 38</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 659.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 12 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#12</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/198482050733_3_20251010-mrtPeru.webp" alt="Nike Air Max Muse">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas Urbanas</span>
+
+                        <h3 class="nombre-producto">Nike Air Max Muse</h3>
+
+                        <p class="descripcion-corta">Silueta moderna con plataforma de absorción de impacto.</p>
+
+                        <div class="tallas-disponibles">Tallas: 36 · 37 · 38 · 39</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 739.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 13 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#13</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/198726601936_3_20260317-mrtPeru.webp" alt="Air Jordan 1 Retro High OG">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas Urbanas</span>
+
+                        <h3 class="nombre-producto">Air Jordan 1 Retro High OG</h3>
+
+                        <p class="descripcion-corta">Detalles reflectantes 360° y soporte en el arco.</p>
+
+                        <div class="tallas-disponibles">Tallas: 36 · 37 · 38 · 39 · 40</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 799.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 14 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-oferta">-10%</span>
+
+                        <span class="numero-item">#14</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Zapatillas_Samba_OG_Granate_KJ7488_01_00_standard.avif" alt="Zapatillas Samba OG">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas Urbanas.</span>
+
+                        <h3 class="nombre-producto">Zapatillas Samba OG</h3>
+
+                        <p class="descripcion-corta">Zapatillas de ajuste clásico con pedrería brillante para un estilo moderno y vibrante.</p>
+
+                        <div class="tallas-disponibles">Tallas: 35 · 36 · 37 · 38</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio"><del>S/ 449.00</del> S/ 339.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 15 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#15</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Zapatillas_SL_72_OG_Marron_KZ6391_01_00_standard.avif" alt="Zapatillas SL 72 OG">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas clásicas con un exterior de cuero flexible para una comodidad duradera</span>
+
+                        <h3 class="nombre-producto">Zapatillas SL 72 OG</h3>
+
+                        <p class="descripcion-corta">Tecnología GEL para máxima absorción y control de pisada.</p>
+
+                        <div class="tallas-disponibles">Tallas: 36 · 37 · 38 · 39</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 429.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                 <!-- Producto 16 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#16</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Zapatillas_de_Entrenamiento_Dropset_Control_Rosado_KJ9168_01_00_standard.avif" alt="Zapatillas de Entrenamiento Dropset Control">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Zapatillas para pesas Stable lifting con agarre multidireccional</span>
+
+                        <h3 class="nombre-producto">Zapatillas de Entrenamiento Dropset Control</h3>
+
+                        <p class="descripcion-corta">Tecnología GEL para máxima absorción y control de pisada.</p>
+
+                        <div class="tallas-disponibles">Tallas: 36 · 37 · 38 · 39</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 299.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+
+
+               
+
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- =================================================================
+
+             PARTE 2: SECCIÓN DE ROPA DEPORTIVA DE MUJER (Productos 16 al 30)
+
+             Pon tus fotos en el atributo src="" de cada etiqueta <img>
+
+             ================================================================= -->
+
+        <section id="ropa" class="bloque-categoria">
+
+            <div class="catalogo-header">
+
+                <div class="catalogo-titulo">
+
+                    <h2>Ropa Deportiva para Mujer</h2>
+
+                    <p>Conjuntos, leggings, tops, casacas, shorts y enterizos (15 prendas)</p>
+
+                </div>
+
+                <div class="saltos-rapidos">
+
+                    <a href="#zapatillas" class="btn-salto">👟 Subir a Zapatillas (15)</a>
+
+                    <a href="#ropa" class="btn-salto activo">👚 Ropa Deportiva (15)</a>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="grid-productos">
+
+
+
+                <!-- Producto 16 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-nuevo">Nuevo</span>
+
+                        <span class="numero-item">#17</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Pantalon_de_Saten_Seasonal_Essentials_Granate_KV6852_25_model.avif" alt="Pantalón de Satén Seasonal Essentials">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Urbana</span>
+
+                        <h3 class="nombre-producto">Pantalón de Satén Seasonal Essentials</h3>
+
+                        <p class="descripcion-corta">Pantalón de satén de ajuste holgado con detalles de 3 Tiras plisadas para lucir un estilo refinado.</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 199.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 17 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#18</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Polo_Seasonal_Essentials_Saten_Azul_KS7937_25_model.avif" alt="Polo Seasonal Essentials Satén">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Urbana</span>
+
+                        <h3 class="nombre-producto">Polo Seasonal Essentials Satén</h3>
+
+                        <p class="descripcion-corta">Polo ceñido con acabado satinado para un estilo moderno y elegante.</p>
+
+                        <div class="tallas-disponibles">Tallas: S · M · L · XL</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 79.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 18 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-nuevo">Top Ventas</span>
+
+                        <span class="numero-item">#19</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Casaca_Deportiva_Firebird_Tejido_Denim_Multicolor_KQ6492_25_model.avif" alt="Casaca Deportiva Firebird Tejido Denim">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Urbana</span>
+
+                        <h3 class="nombre-producto">Casaca Deportiva Firebird Tejido Denim</h3>
+
+                        <p class="descripcion-corta">Casaca de tejido denim con cuello alto para un estilo clásico</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 349.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 19 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#20</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Traje_de_natacion_con_tirantes_finos_y_espalda_en_V_Negro_KT0519_25_model.avif" alt="Traje de natación con tirantes finos y espalda en V">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Natacion</span>
+
+                        <h3 class="nombre-producto">Traje de natación con tirantes finos y espalda en V</h3>
+
+                        <p class="descripcion-corta">raje de baño deportivo hecho para entrenar.</p>
+
+                        <div class="tallas-disponibles">Tallas: S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 129.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 20 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-oferta">-20%</span>
+
+                        <span class="numero-item">#21</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Polera_Corta_con_Capucha_SST_2.0_Negro_KT1776_25_model.avif" alt="Polera Corta con Capucha SST 2.0">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Urbana</span>
+
+                        <h3 class="nombre-producto">Polera Corta con Capucha SST 2.0</h3>
+
+                        <p class="descripcion-corta">Polera oversize con capucha y cierre, versátil para crear capas.</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio"><del>S/ 299.00</del> S/ 88.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 21 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#22</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Licras_Seasonal_Essentials_3_Tiras_Estampado_Animal_Print_Pretina_Alta_Negro_KS7984_23_hover_model.avif" alt="Licras Seasonal Essentials 3 Tiras Estampado Animal Print Pretina Alta">
+
+                    </div>
+
+                    <div class="info Sportswear">
+
+                        <span class="categoria-tag">Ropa · Polos & Camisetas</span>
+
+                        <h3 class="nombre-producto">Licras Seasonal Essentials 3 Tiras Estampado Animal Print Pretina Alta</h3>
+
+                        <p class="descripcion-corta">Licras largas con cintura elástica de pretina alta para un ajuste con sujeción.</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L · XL</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 129.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 22 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#23</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Casaca_Deportiva_Plisada_Aterciopelada_Negro_LG4297_25_model.avif" alt="Casaca Deportiva Plisada Aterciopelada">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Urbana</span>
+
+                        <h3 class="nombre-producto">Casaca Deportiva Plisada Aterciopelada</h3>
+
+                        <p class="descripcion-corta">Casaca deportiva oversize de tejido de terciopelo suave para una comodidad y estilo llamativos.</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 299.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 23 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-nuevo">Nuevo</span>
+
+                        <span class="numero-item">#24</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/BVD_adidas_Originals_Sport_Acolchado_Amarillo_KT7077_HM3_hover.tiff.avif" alt="BVD adidas Originals Sport Acolchado">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Deportiva</span>
+
+                        <h3 class="nombre-producto">BVD adidas Originals Sport Acolchado</h3>
+
+                        <p class="descripcion-corta">BVD con tecnología Climacool para una sensación fresca y seca y un rendimiento sin distracciones.</p>
+
+                        <div class="tallas-disponibles">Tallas: S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 179.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 24 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#25</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Casaca_Deportiva_adidas_by_Stella_McCartney_Granate_KR6264_HM1.avif" alt="Casaca Deportiva adidas by Stella McCartney">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Urbana</span>
+
+                        <h3 class="nombre-producto">Casaca Deportiva adidas by Stella McCartney</h3>
+
+                        <p class="descripcion-corta">Eleva tu juego de ropa deportiva con una elegante casaca deportiva de ajuste holgado por encima de la cintura.</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 599.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 25 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#26</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Polo_con_Capucha_Soft_lux_Sheer_Manga_Larga_Blanco_KS8005_25_model.avif" alt="Polo con Capucha Soft lux Sheer Manga Larga">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Deporte</span>
+
+                        <h3 class="nombre-producto">Polo con Capucha Soft lux Sheer Manga Larga</h3>
+
+                        <p class="descripcion-corta">Polo de ajuste ceñido con capucha para un estilo relajado y cotidiano.</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L · XL</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 129.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 26 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-oferta">-15%</span>
+
+                        <span class="numero-item">#27</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Shorts_Firebird_Classic_Marron_KS4786_HM1.avif" alt="Shorts Firebird Classic">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Urbana</span>
+
+                        <h3 class="nombre-producto">Shorts Firebird Classic</h3>
+
+                        <p class="descripcion-corta">Shorts de ajuste holgado con confección en tricot para brindar comodidad relajada y estilo de herencia.</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio"><del>S/ 149.00</del> S/ 69.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 27 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#28</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Pantalon_adidas_by_Stella_McCartney_Purpura_KR6256_25_model.avif" alt="Pantalón adidas by Stella McCartney">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Urbana</span>
+
+                        <h3 class="nombre-producto">Pantalón adidas by Stella McCartney</h3>
+
+                        <p class="descripcion-corta">Pantalón deportivo de pierna recta con botones a presión en los laterales, perfecto para relajarte con estilo.</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 579.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 28 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#29</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/CAMISETA_SIN_MANGAS_CLUB_TENNIS_CLIMACOOL_GRAPHIC_Rosado_KV4388_25_model.avif" alt="CAMISETA SIN MANGAS CLUB TENNIS CLIMACOOL GRAPHIC">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Casual</span>
+
+                        <h3 class="nombre-producto">CAMISETA SIN MANGAS CLUB TENNIS CLIMACOOL GRAPHIC</h3>
+
+                        <p class="descripcion-corta">BVD con tecnología Climacool para un rendimiento fresco, seco y sin distracciones dentro y fuera de la cancha</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 129.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 29 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="etiqueta-nuevo">Nuevo</span>
+
+                        <span class="numero-item">#30</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Casaca_Deportiva_Soft_Lux_Ajustada_Purpura_KR5287_25_model.avif" alt="Casaca Deportiva Soft Lux Ajustada">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa Urbana</span>
+
+                        <h3 class="nombre-producto">Casaca Deportiva Soft Lux Ajustada</h3>
+
+                        <p class="descripcion-corta">Casaca deportiva con protección UPF 50+: una capa práctica y versátil.</p>
+
+                        <div class="tallas-disponibles">Tallas: S · M · L</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 269.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- Producto 30 -->
+
+                <article class="tarjeta-producto">
+
+                    <div class="contenedor-imagen">
+
+                        <span class="numero-item">#31</span>
+
+                        <!-- PON TU IMAGEN AQUÍ EN EL HTML -->
+
+                        <img src="img/Cardigan_de_Tejido_Trenzado_Azul_KT1859_HM1.avif" alt="Cárdigan de Tejido Trenzado">
+
+                    </div>
+
+                    <div class="info-producto">
+
+                        <span class="categoria-tag">Ropa · Conjuntos Térmicos</span>
+
+                        <h3 class="nombre-producto">Cárdigan de Tejido Trenzado</h3>
+
+                        <p class="descripcion-corta">Cárdigan de ajuste holgado con cierre de botones y cuello en V para un estilo cómodo y relajado.</p>
+
+                        <div class="tallas-disponibles">Tallas: XS · S · M · L · XL</div>
+
+                        <div class="precio-accion">
+
+                            <span class="precio">S/ 429.00</span>
+
+                            <a href="#comprar" class="btn-agregar">Comprar</a>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+
+
+    <!-- SECCIÓN DE BENEFICIOS DE LA TIENDA -->
+
+    <section class="beneficios-seccion">
+
+        <div class="beneficio-card">
+
+            <div class="beneficio-icono">🚚</div>
+
+            <h4>Envíos Rápidos a Todo el País</h4>
+
+            <p>Recibe tus zapatillas y ropa deportiva en 24 a 48 horas.</p>
+
+        </div>
+
+        <div class="beneficio-card">
+
+            <div class="beneficio-icono">🔄</div>
+
+            <h4>Cambios de Talla Gratis</h4>
+
+            <p>¿No te quedó la talla? Tienes 30 días para cambiarla sin costo.</p>
+
+        </div>
+
+        <div class="beneficio-card">
+
+            <div class="beneficio-icono">🛡️</div>
+
+            <h4>Calidad 100% Garantizada</h4>
+
+            <p>Prendas y calzado de alto rendimiento con garantía oficial.</p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+
+    <footer class="footer-seccion">
+
+        <p>&copy; 2026 Tienda Deportiva - Sección Mujeres. Todos los derechos reservados.</p>
+
+    </footer>
+
+
+
 </body>
-</html>
+
+</html> 
