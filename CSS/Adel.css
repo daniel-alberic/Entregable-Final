@@ -22,7 +22,7 @@
     --fuente-parrafos: 'Monda', Arial, sans-serif;
     --fuente-marca: 'Poppins', Arial, sans-serif;
 }
-/*Logo*/
+
 .menu__logo img {
     height: 48px;
     width: auto;
@@ -42,7 +42,7 @@
     color: #ffff;
     letter-spacing: 10px;
 }
-/*Enlaces menu*/
+
 .menu {
     padding: 15px;
     background: #000;
@@ -54,13 +54,9 @@
 
 .menu__enlaces a {
     text-decoration: none;
-    padding: 20px;
+    padding: 15px 50px;
     font-family: "Monda", sans-serif;
     color: #ffff;
-}
-.menu__enlaces a:hover {
-    color: #b7ff00;
-    transition: 0.4s;
 }
 
 /* Contenedor de lupa buscador y carrito */
@@ -71,7 +67,7 @@
     gap: 20px;
 }
 
-/* Buscar */
+/* boton de la Lupa */
 .menu__buscar {
     background: none;
     border: 0;
@@ -108,7 +104,6 @@
 .menu__carrito:hover {
     background: #b7ff00;
     color: #0a0a0a;
-    transition: 0.3s;
 }
 
 /* Hamburguesa: oculta en pantallas grandes */
@@ -138,9 +133,11 @@
         flex-wrap: wrap;
         gap: 8px;
     }
+
     .menu__logo { order: 1; }
     .menu__acciones { order: 2; gap: 8px; }
     .menu__btn-menu { order: 3; display: flex; }
+
     /* Los enlaces pasan a una fila propia, en columna */
     .menu__enlaces {
         order: 4;
@@ -148,15 +145,26 @@
         flex-direction: column;
         display: none;
     }
+
     .menu__enlaces a {
         padding: 14px 0;
         font-size: 18px;
         border-bottom: 1px solid var(--colorBordes);
     }
+
+    .menu__enlaces.abierto {
+    display: flex;
+}
+
+    .menu__btn-menu:focus:not(:focus-visible) {
+    outline: none;
+}
+
     /* Todo un poco más pequeño */
     .menu__logo img { height: 40px; }
     .logo__nombre { font-size: 22px; letter-spacing: 6px; }
     .menu__carrito { padding: 8px 12px; font-size: 13px; }
+
     /* El buscador se abre debajo de la barra */
     .menu__input-buscar.activo {
         position: absolute;
@@ -167,8 +175,7 @@
         z-index: 10;
     }
 }
-/* FIN DE CONTACTOS */
-
+/* FIN MENU DE NAVEGACIÓN */
 /* INICIO CARDS */
 
 .cards__grid {
