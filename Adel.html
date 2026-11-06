@@ -32,73 +32,78 @@
     <script src="js/WE_MC_03_jquery.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="menu">
-    <!--1. logo menu-->
-      <div class="menu__logo">
-        <a href="index.html" class="menu__marca">
-          <img src="img/nova_isotipo_blanco.svg" alt="Logo Nova" />
-          <span class="logo__nombre">N&Oslash;VA</span>
-        </a>
-      </div>
-    <!-- 2. Botón Hamburguesa (para responsive en móvil) -->
-      <a
-        href="#"
-        class="menu__btn-menu"
-        id="btn-menu"
-        aria-label="Abrir menú"
+    <header>
+      <nav class="menu">
+        <!-- 1. Bloque del Logo -->
+        <div class="menu__logo">
+          <a href="index.html" class="menu__marca">
+            <img src="img/nova_isotipo_blanco.svg" alt="Logo Nova" />
+            <span class="logo__nombre">N&Oslash;VA</span>
+          </a>
+        </div>
+        <!-- 2. Botón Hamburguesa (para responsive en móvil) -->
+        <a
+          href="#"
+          class="menu__btn-menu"
+          id="btn-menu"
+          aria-label="Abrir menú"
         >
-        <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
-        <path
-          d="M3 6h18M3 12h18M3 18h18"
-          stroke="currentColor"
-          stroke-width="2.5"
-          fill="none"
-          stroke-linecap="round"
-        />
-        </svg>
-      </a>
-    <!-- 3. Bloque de Enlaces de Navegación -->
-      <div class="menu__enlaces" id="enlaces">
-        <a href="index.html">Inicio</a>
-        <a href="sebastian.html">Hombre</a>
-        <a href="Marcelo.html">Mujer</a>
-        <a href="Adel.html">Niños</a>
-        <a href="fran.html">Contacto</a>
-        <a href="login.html">Login</a>
-      </div>
-    <!-- 4. Buscar y carrito -->
-      <div class="menu__acciones">
-        <button
-          type="button"
-          class="menu__buscar"
-          id="btn-buscar"
-          aria-label="Buscar">
-          <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
-          <circle
-            cx="13"
-            cy="13"
-            r="9"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"/>
-          <path
-            d="M20 20 L29 29"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"/>
+          <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M3 6h18M3 12h18M3 18h18"
+              stroke="currentColor"
+              stroke-width="2.5"
+              fill="none"
+              stroke-linecap="round"
+            />
           </svg>
-        </button>
-        <input
-          type="search"
-          class="menu__input-buscar"
-          id="input-buscar"
-          placeholder="Buscar productos"
-          aria-label="Buscar productos"/>
-        <a href="#" class="menu__carrito"
-          >Carrito (<span id="carrito-cantidad">0</span>)</a>
-      </div>
-    </nav>
+        </a>
+        <!-- 3. Bloque de Enlaces de Navegación -->
+        <div class="menu__enlaces" id="enlaces">
+          <a href="index.html">Inicio</a>
+          <a href="sebastian.html">Hombre</a>
+          <a href="Marcelo.html">Mujer</a>
+          <a href="Adel.html">Niños</a>
+          <a href="fran.html">Contacto</a>
+          <a href="login.html">Login</a>
+        </div>
+        <!-- 4. Buscar y carrito -->
+        <div class="menu__acciones">
+          <button
+            type="button"
+            class="menu__buscar"
+            id="btn-buscar"
+            aria-label="Buscar"
+          >
+            <svg width="22" height="22" viewBox="0 0 32 32" aria-hidden="true">
+              <circle
+                cx="13"
+                cy="13"
+                r="9"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+              <path
+                d="M20 20 L29 29"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+              />
+            </svg>
+          </button>
+          <input
+            type="search"
+            class="menu__input-buscar"
+            id="input-buscar"
+            placeholder="Buscar productos"
+            aria-label="Buscar productos"
+          />
+          <a href="#" class="menu__carrito"
+            >Carrito (<span id="carrito-cantidad">0</span>)</a
+          >
+        </div>
+      </nav>
   </header>
   <!--Baner carrusel-->
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
