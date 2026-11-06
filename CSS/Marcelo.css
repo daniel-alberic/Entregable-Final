@@ -21,6 +21,7 @@
   --shadow-card: 0 4px 16px rgba(0, 0, 0, 0.06);
   --shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.12);
   --transition-fast: 0.25s ease;
+   --colorPrimario: #b7ff00;
 }
 
 *, *::before, *::after {
@@ -487,4 +488,39 @@ body {
   .btn-primary, .btn-secondary {
     width: 100%;
   }
+}
+/* FIN DE CONTACTOS */
+footer {
+    background-color: var(--colorPrimario);
+    color: #fff;
+    padding: 1em 0;
+}
+
+.iconos-pie {
+    font-size: 3em;
+}
+
+.iconos-pie:hover {
+    color: var(--colorSecundario)
+}
+
+.pie,
+.info {
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 1em;
+    color: #000;
+}
+
+.derechos {
+    background-color: var(--colorSecundario);
+    color: #fff;
+    font-family: "poppins";
+    padding: 0.5em 0;
+}
+
+.mapa {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
