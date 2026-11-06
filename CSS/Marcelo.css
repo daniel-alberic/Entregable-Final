@@ -431,18 +431,6 @@ body {
 }
 
 /* ==========================================================================
-   PIE DE PÁGINA (FOOTER)
-   ========================================================================== */
-.footer-seccion {
-  background-color: var(--color-dark);
-  color: #9ca3af;
-  text-align: center;
-  padding: 2.5rem 1.5rem;
-  font-size: 0.9rem;
-  border-top: 1px solid #27272a;
-}
-
-/* ==========================================================================
    RESPONSIVE DESIGN (MÓVILES Y PANTALLAS PEQUEÑAS)
    ========================================================================== */
 @media (max-width: 768px) {
@@ -487,4 +475,33 @@ body {
   .btn-primary, .btn-secondary {
     width: 100%;
   }
+}
+/* PIE DE PAGINA */
+footer {
+    background-color: var(--colorPrimario);
+    color: #fff;
+    padding: 1em 0;
+}
+ 
+.iconos-pie {
+    font-size: 3em;
+}
+ 
+.iconos-pie:hover {
+    color: var(--colorSecundario)
+}
+ 
+.pie,
+.info {
+    font-family: "poppins";
+    font-weight: 400;
+    font-size: 1em;
+    color: #000;
+}
+ 
+.derechos {
+    background-color: var(--colorSecundario);
+    color: #fff;
+    font-family: "poppins";
+    padding: 0.5em 0;
 }
