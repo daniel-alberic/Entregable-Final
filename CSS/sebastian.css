@@ -419,44 +419,31 @@ section.container.my-5 {
 /* fin compra deporte */
 
 /* PIE DE PAGINA */
-html, body {
-    overflow-x: hidden; /* Evita que aparezca barra de desplazamiento horizontal */
+footer {
+    background-color: var(--colorPrimario);
+    color: #fff;
+    padding: 1em 0;
 }
 
-footer {
-    width: 100vw !important;
-    position: relative !important;
-    left: 50% !important;
-    right: 50% !important;
-    margin-left: -50vw !important;
-    margin-right: -50vw !important;
-    background-color: var(--colorPrimario) !important;
-    color: #000 !important;
-    padding: 1.5em 0 !important;
+.iconos-pie {
+    font-size: 3em;
+}
+
+.iconos-pie:hover {
+    color: var(--colorSecundario)
 }
 
 .pie,
 .info {
-    font-family: "Poppins", Arial, sans-serif;
-    font-weight: 700;
+    font-family: "poppins";
+    font-weight: 400;
     font-size: 1em;
     color: #000;
 }
 
 .derechos {
-    width: 100vw !important;
-    position: relative !important;
-    left: 50% !important;
-    right: 50% !important;
-    margin-left: -50vw !important;
-    margin-right: -50vw !important;
-    background-color: var(--colorSecundario) !important;
+    background-color: var(--colorSecundario);
     color: #fff;
-    font-family: "Poppins", Arial, sans-serif;
-    padding: 0.8em 0 !important;
-}
-
-.derechos a {
-    color: #0d6efd;
-    text-decoration: underline;
+    font-family: "poppins";
+    padding: 0.5em 0;
 }
