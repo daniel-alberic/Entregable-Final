@@ -263,3 +263,8 @@ footer {
     font-family: "poppins";
     padding: 0.5em 0;
 }
+
+.devlab{
+    text-decoration: none;
+    color: var(--colormison);
+}
